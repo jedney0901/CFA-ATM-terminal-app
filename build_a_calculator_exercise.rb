@@ -31,11 +31,11 @@ def divide (y, x)
   end_value = y / x
 end
 
-def display
-  if value == end_value
-  puts "Thanks, your result was #{end_value}, guess you don't need the meaning of life."
-  elsif value == 42
-    puts "Thanks, the meaning of life is actually just 42"
+def display(end_value)
+  if end_value == 42
+  puts "Thanks, your result was #{end_value} you have unlocked the meaning of life, funnily enough the meaning of life is actually just 42."
+else
+    puts "Thanks, your result was #{end_value}, guess you don't need the meaning of life."
 end
 end
 
@@ -57,13 +57,17 @@ calculation = gets.chomp
 
 if calculation == "1"
   end_value = add(y, x)
+  display(end_value)
 
 elsif calculation == "2"
   end_value = subtract(y, x)
+  display(end_value)
 
 elsif calculation == "3"
   end_value = multiply(y, x)
+  display(end_value)
 
 elsif calculation == "4"
   end_value = divide(y, x)
+  displaay(end_value)
 end
